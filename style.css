@@ -1,0 +1,278 @@
+/* Variables CSS pour faciliter les modifications */
+:root
+{
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --light-text-color: #eee;
+    --bg-light: #f4f7f6;
+    --bg-dark: #2f4f4f;
+    --border-color: #ddd;
+    --font-family: 'Arial', sans-serif;
+    --heading-font-family: 'Georgia', serif;
+}
+
+/* Reset de base et styles généraux */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+.container
+{
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3
+{
+    font-family: var(--heading-font-family);
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+h1
+{
+    font-size: 2.8em;
+    color: var(--light-text-color);
+    text-align: center;
+}
+
+h2
+{
+    font-size: 2em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+h3
+{
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+p
+{
+    margin-bottom: 10px;
+}
+
+ul
+{
+    list-style: none;
+    padding-left: 0;
+}
+
+li
+{
+    margin-bottom: 5px;
+}
+
+/* Header/Hero Section */
+.hero
+{
+    background: var(--bg-dark);
+    color: var(--light-text-color);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content
+{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero .job-title
+{
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #a0c4ff;
+}
+
+.contact-info
+{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.1em;
+}
+
+.contact-info span
+{
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i
+{
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+/* Sections générales */
+.section
+{
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Profil Professionnel */
+.profile-description
+{
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Compétences */
+.skills-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-category ul
+{
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Parcours Professionnel & Formation (Timeline) */
+.timeline-item
+{
+    border-left: 3px solid var(--primary-color);
+    padding-left: 20px;
+    margin-left: 10px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.timeline-item::before
+{
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-item h3
+{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.timeline-item .date
+{
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul
+{
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Centres d'intérêt */
+
+.interest-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.interest-list p
+{
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+
+footer
+{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px)
+{
+    h1
+    {
+        font-size: 2.2em;
+    }
+
+    .hero
+    {
+        padding: 40px 15px;
+    }
+
+    .contact-info
+    {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1em;
+    }
+
+    .skills-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .section
+    {
+        padding: 20px;
+    }
+}
+
+
+.contact-info .contact-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+
+    .contact-info .contact-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
