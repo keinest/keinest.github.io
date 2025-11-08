@@ -1,6 +1,4 @@
-/* Variables CSS pour faciliter les modifications */
-:root
-{
+:root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
     --text-color: #333;
@@ -12,46 +10,38 @@
     --heading-font-family: 'Georgia', serif;
 }
 
-/* Reset de base et styles généraux */
-
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body
-{
+body {
     font-family: var(--font-family);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-light);
 }
 
-.container
-{
+.container {
     max-width: 960px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
-h1, h2, h3
-{
+h1, h2, h3 {
     font-family: var(--heading-font-family);
     color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
-h1
-{
+h1 {
     font-size: 2.8em;
     color: var(--light-text-color);
     text-align: center;
 }
 
-h2
-{
+h2 {
     font-size: 2em;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
@@ -60,31 +50,36 @@ h2
     color: var(--primary-color);
 }
 
-h3
-{
+h3 {
     font-size: 1.5em;
     color: var(--secondary-color);
 }
 
-p
-{
+p {
     margin-bottom: 10px;
 }
 
-ul
-{
+ul {
     list-style: none;
     padding-left: 0;
 }
 
-li
-{
+li {
     margin-bottom: 5px;
 }
 
-/* Header/Hero Section */
-.hero
-{
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5dade2;
+    text-decoration: underline;
+}
+
+.hero {
     background: var(--bg-dark);
     color: var(--light-text-color);
     padding: 60px 20px;
@@ -92,21 +87,19 @@ li
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content
-{
+.hero-content {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.hero .job-title
-{
+.hero .job-title {
     font-size: 1.5em;
     margin-top: 10px;
     color: #a0c4ff;
+    font-weight: bold;
 }
 
-.contact-info
-{
+.contact-info {
     margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -115,21 +108,28 @@ li
     font-size: 1.1em;
 }
 
-.contact-info span
-{
+.contact-info span {
     display: flex;
     align-items: center;
 }
 
-.contact-info i
-{
+.contact-info img.contact-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
     margin-right: 8px;
-    color: var(--primary-color);
 }
 
-/* Sections générales */
-.section
-{
+.contact-info .email-link {
+    color: var(--light-text-color);
+}
+
+.contact-info .email-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.section {
     background-color: #fff;
     padding: 30px;
     margin-bottom: 20px;
@@ -137,30 +137,23 @@ li
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Profil Professionnel */
-.profile-description
-{
+.profile-description {
     font-size: 1.1em;
     line-height: 1.8;
 }
 
-/* Compétences */
-.skills-grid
-{
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.skill-category ul
-{
+.skill-category ul {
     list-style: disc;
     padding-left: 20px;
 }
 
-/* Parcours Professionnel & Formation (Timeline) */
-.timeline-item
-{
+.timeline-item {
     border-left: 3px solid var(--primary-color);
     padding-left: 20px;
     margin-left: 10px;
@@ -168,8 +161,7 @@ li
     margin-bottom: 25px;
 }
 
-.timeline-item::before
-{
+.timeline-item::before {
     content: '';
     position: absolute;
     left: -8px;
@@ -180,36 +172,30 @@ li
     border-radius: 50%;
 }
 
-.timeline-item h3
-{
+.timeline-item h3 {
     margin-top: 0;
     margin-bottom: 5px;
 }
 
-.timeline-item .date
-{
+.timeline-item .date {
     font-style: italic;
     color: #666;
     margin-bottom: 10px;
 }
 
-.timeline-item ul
-{
+.timeline-item ul {
     list-style: disc;
     padding-left: 20px;
+    margin-top: 10px;
 }
 
-/* Centres d'intérêt */
-
-.interest-list
-{
+.interest-list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.interest-list p
-{
+.interest-list p {
     background-color: var(--primary-color);
     color: var(--light-text-color);
     padding: 8px 15px;
@@ -218,9 +204,7 @@ li
     font-size: 0.95em;
 }
 
-
-footer
-{
+footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -229,50 +213,31 @@ footer
     font-size: 0.9em;
 }
 
-/* Responsive Design */
-
-@media (max-width: 768px)
-{
-    h1
-    {
+@media (max-width: 768px) {
+    h1 {
         font-size: 2.2em;
     }
 
-    .hero
-    {
+    .hero {
         padding: 40px 15px;
     }
 
-    .contact-info
-    {
+    .contact-info {
         flex-direction: column;
         gap: 10px;
         font-size: 1em;
     }
 
-    .skills-grid
-    {
+    .contact-info img.contact-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
-    .section
-    {
+    .section {
         padding: 20px;
-    }
-}
-
-
-.contact-info .contact-icon {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-@media (max-width: 768px) {
-
-    .contact-info .contact-icon {
-        width: 20px;
-        height: 20px;
     }
 }
