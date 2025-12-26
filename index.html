@@ -3,14 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>keinest — Portfolio</title>
+  <title>keinest — Pentester & Sécurité</title>
+  <meta name="description" content="Pentester passionné | Cybersécurité | Test d'intrusion | C, Java, Python">
+  <meta property="og:title" content="keinest — Portfolio Cybersécurité">
+  <meta property="og:description" content="Pentester passionné spécialisé en tests d'intrusion et sécurité offensive">
+  <meta property="og:type" content="website">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .security-tag 
+	{
+      display: inline-block;
+      background: linear-gradient(135deg, #ff4757, #ff3838);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .skills li:hover {
+      animation: pulse 0.5s ease;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="logo" href="/">keinest</a>
+      <a class="logo" href="/">keinest<span class="security-tag">Pentester</span></a>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav class="nav" aria-label="Navigation principale">
         <ul>
@@ -27,53 +55,97 @@
     <section id="hero" class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1>Créer des produits numériques clairs et robustes</h1>
-          <p class="lede">Designer & développeur front‑end — j'aide les équipes à transformer des idées en expériences web utiles, accessibles et rapides.</p>
-          <p class="cta"><a href="https://github.com/keinest" class="btn" target="_blank" rel="noopener noreferrer">Mes projets</a> <a href="#contact" class="btn btn-outline">Me contacter</a></p>
+          <h1>Sécurité Offensive & Test d'Intrusion</h1>
+          <p class="lede">Pentester passionné — Je recherche des vulnérabilités pour renforcer la sécurité des systèmes. Spécialisé en cybersécurité offensive, reverse engineering et bonnes pratiques de sécurité.</p>
+          <p class="cta">
+            <a href="#projects" class="btn">Voir mes projets</a>
+            <a href="https://tryhackme.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+          </p>
         </div>
         <div class="hero-media">
-          <img src="1.png" alt="Aperçu de projet" class="hero-image">
+          <img src="/home/blackblade/Bureau/Programmation/web/Portofolio/keinest.github.io-main/b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Interface d'analyse de sécurité" class="hero-image">
         </div>
       </div>
     </section>
 
     <section id="about" class="section container">
       <h2>À propos</h2>
-      <p>Je suis keinest — je conçois et développe des interfaces web modernes, centrées sur l'utilisateur. J'attache une grande importance à l'accessibilité, à la performance et à la simplicité.</p>
+      <p>Je suis <strong>keinest</strong> — passionné par la cybersécurité et le hacking éthique. Mon objectif : devenir <strong>Pentester professionnel</strong>. J'approfondis mes connaissances en sécurité offensive, en tests d'intrusion et en analyse de vulnérabilités.</p>
+      <p>Ma passion pour la sécurité informatique me pousse à toujours chercher à comprendre le fonctionnement interne des systèmes pour mieux les protéger.</p>
     </section>
 
     <section id="projects" class="section container">
-      <h2>Projets récents</h2>
+      <h2>Projets & Réalisations</h2>
       <div id="projects-list" class="projects-grid" aria-live="polite">
-        <!-- Les projets seront chargés dynamiquement depuis GitHub -->
+        <article class="project-card">
+          <img src="/home/blackblade/Bureau/Programmation/web/Portofolio/keinest.github.io-main/b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Projet de sécurité - Capture d'écran">
+          <div class="card-body">
+            <h3>Laboratoire Sécurité</h3>
+            <p>Environnement virtuel pour pratiquer les tests d'intrusion et l'analyse de vulnérabilités.</p>
+            <p>
+              <a href="#" class="card-link">GitHub</a>
+              <span> · </span>
+              <span style="color: var(--accent); font-weight: 600;">Sécurité</span>
+            </p>
+          </div>
+        </article>
+        
+        <article class="project-card">
+          <img src="/home/blackblade/Bureau/Programmation/web/Portofolio/keinest.github.io-main/b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Script d'automatisation">
+          <div class="card-body">
+            <h3>Outils Python</h3>
+            <p>Collection de scripts Python pour l'automatisation de tests de sécurité et l'analyse réseau.</p>
+            <p>
+              <a href="#" class="card-link">GitHub</a>
+              <span> · </span>
+              <span style="color: var(--accent); font-weight: 600;">Python</span>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
     <section id="skills" class="section container">
-      <h2>Compétences</h2>
+      <h2>Compétences Techniques</h2>
       <ul class="skills">
-        <li>Design d'interface</li>
-        <li>HTML / CSS modernes</li>
-        <li>JavaScript / React</li>
-        <li>Accessibilité (a11y)</li>
-        <li>Optimisation des performances</li>
+        <li class="security-badge">Cybersécurité Offensive</li>
+        <li class="security-badge">Test d'Intrusion</li>
+        <li class="security-badge">Analyse de Vulnérabilités</li>
+        <li>C</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li class="security-badge">Reverse Engineering</li>
+        <li>Protocoles Réseaux Sans fils</li>
+        <li>Linux / Administration Système</li>
+        <li class="security-badge">OWASP Top 10</li>
       </ul>
     </section>
 
     <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p>Envoyez un message via : <a href="mailto:keinest@example.com">keinest@example.com</a> ou retrouvez-moi sur <a href="https://github.com/keinest">GitHub</a>.</p>
+      <h2>Contact & Réseaux</h2>
+      <p>Ouvert aux opportunités en cybersécurité, stages ou collaborations :</p>
+      <ul class="skills" style="margin-top: 20px;">
+        <li><a href="mailto:keinest@example.com" style="color: var(--accent); text-decoration: none;">📧 Email</a></li>
+        <li><a href="https://github.com/keinest" style="color: var(--accent); text-decoration: none;" target="_blank" rel="noopener noreferrer">💻 GitHub</a></li>
+        <li><a href="https://www.linkedin.com" style="color: var(--accent); text-decoration: none;" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a></li>
+        <li><a href="https://tryhackme.com" style="color: var(--accent); text-decoration: none;" target="_blank" rel="noopener noreferrer">🛡️ TryHackMe</a></li>
+        <li><a href="https://www.hackthebox.com" style="color: var(--accent); text-decoration: none;" target="_blank" rel="noopener noreferrer">🎯 HackTheBox</a></li>
+      </ul>
+      <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">
+        <em>Note : Tous les tests de sécurité sont effectués dans des environnements contrôlés et autorisés.</em>
+      </p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 keinest · Site professionnel</p>
+      <p>© 2025 keinest · Pentester & Cybersécurité · 
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" style="color: var(--muted); text-decoration: none;" target="_blank" rel="noopener noreferrer">Éthique & Responsabilité</a>
+      </p>
     </div>
   </footer>
 
   <script>
-    // Menu toggle accessible
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
 
@@ -82,38 +154,37 @@
       toggle.setAttribute('aria-expanded', open);
     });
 
-    // Fermer le menu quand on clique sur un lien (mobile)
     document.querySelectorAll('.nav a').forEach(a => {
       a.addEventListener('click', () => nav.classList.remove('open'));
     });
 
-    // Charger les repos GitHub de l'utilisateur et afficher comme projets
     async function loadRepos() {
       const username = 'keinest';
       const container = document.getElementById('projects-list');
-      container.innerHTML = '<p>Chargement des projets…</p>';
+      
+      const staticCards = container.innerHTML;
+      container.innerHTML = staticCards + '<p style="grid-column: 1 / -1; text-align: center;">Chargement des projets GitHub…</p>';
 
       try {
         const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
         if (!res.ok) throw new Error('GitHub API error ' + res.status);
         const repos = await res.json();
 
-        // Filtrer: exclure forks et les repo vides
-        const filtered = repos.filter(r => !r.fork && (r.description || r.homepage || r.language));
-        if (filtered.length === 0) {
-          container.innerHTML = '<p>Aucun projet public trouvé.</p>';
-          return;
-        }
+        const filtered = repos.filter(r => !r.fork && (r.description || r.language));
+        
+        const reposToShow = filtered.slice(0, 10);
+        
+        if (reposToShow.length === 0) return;
 
-        container.innerHTML = '';
-        filtered.forEach(r => {
+        container.innerHTML = staticCards;
+        
+        reposToShow.forEach(r => {
           const el = document.createElement('article');
           el.className = 'project-card';
 
           const img = document.createElement('img');
-          // Placeholder image: utiliser 2.png/3.png si disponibles, sinon une couleur
-          img.src = '2.png';
-          img.alt = r.name + ' — aperçu';
+          img.src = '/home/blackblade/Bureau/Programmation/web/Portofolio/keinest.github.io-main/b1cc20b7f0115bc41472288edac2abe9.jpg';
+          img.alt = r.name;
 
           const body = document.createElement('div');
           body.className = 'card-body';
@@ -122,7 +193,7 @@
           h3.textContent = r.name;
 
           const p = document.createElement('p');
-          p.textContent = r.description || (r.language ? ('Langage: '+r.language) : 'Projet GitHub');
+          p.textContent = r.description || (r.language ? 'Langage: ' + r.language : 'Projet GitHub');
 
           const links = document.createElement('p');
           const repoLink = document.createElement('a');
@@ -134,16 +205,10 @@
 
           links.appendChild(repoLink);
 
-          if (r.homepage) {
-            const sep = document.createTextNode(' · ');
-            const live = document.createElement('a');
-            live.href = r.homepage;
-            live.textContent = 'Live';
-            live.className = 'card-link';
-            live.target = '_blank';
-            live.rel = 'noopener noreferrer';
-            links.appendChild(sep);
-            links.appendChild(live);
+          if (r.language) {
+            const langTag = document.createElement('span');
+            langTag.innerHTML = ' · <span style="color: var(--accent); font-weight: 600;">' + r.language + '</span>';
+            links.appendChild(langTag);
           }
 
           body.appendChild(h3);
@@ -157,11 +222,9 @@
         });
       } catch (err) {
         console.error(err);
-        container.innerHTML = '<p>Impossible de charger les projets depuis GitHub. Vérifiez votre connexion ou réessayez plus tard.</p>';
       }
     }
 
-    // Lancer au chargement
     loadRepos();
   </script>
 </body>
