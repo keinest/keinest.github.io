@@ -12,7 +12,7 @@
     <div class="container">
       <a class="logo" href="/">keinest</a>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="nav">
+      <nav class="nav" aria-label="Navigation principale">
         <ul>
           <li><a href="#about">À propos</a></li>
           <li><a href="#projects">Projets</a></li>
@@ -26,12 +26,14 @@
   <main>
     <section id="hero" class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-content">
           <h1>Créer des produits numériques clairs et robustes</h1>
           <p class="lede">Designer & développeur front‑end — j'aide les équipes à transformer des idées en expériences web utiles, accessibles et rapides.</p>
           <p class="cta"><a href="#projects" class="btn">Voir mes projets</a> <a href="#contact" class="btn btn-outline">Me contacter</a></p>
         </div>
-        <img src="1.png" alt="Aperçu de projet" class="hero-image">
+        <div class="hero-media">
+          <img src="1.png" alt="Aperçu de projet" class="hero-image">
+        </div>
       </div>
     </section>
 
@@ -42,20 +44,8 @@
 
     <section id="projects" class="section container">
       <h2>Projets récents</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <img src="2.png" alt="Projet 1">
-          <h3>Projet 1 — Titre</h3>
-          <p>Une courte description du projet, le problème résolu et les technologies utilisées.</p>
-          <a class="card-link" href="#">En savoir plus</a>
-        </article>
-
-        <article class="project-card">
-          <img src="3.png" alt="Projet 2">
-          <h3>Projet 2 — Titre</h3>
-          <p>Une courte description du projet, le rôle joué et les résultats obtenus.</p>
-          <a class="card-link" href="#">En savoir plus</a>
-        </article>
+      <div id="projects-list" class="projects-grid" aria-live="polite">
+        <!-- Les projets seront chargés dynamiquement depuis GitHub -->
       </div>
     </section>
 
@@ -83,9 +73,96 @@
   </footer>
 
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function(){
-      document.querySelector('.nav').classList.toggle('open');
+    // Menu toggle accessible
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
     });
+
+    // Fermer le menu quand on clique sur un lien (mobile)
+    document.querySelectorAll('.nav a').forEach(a => {
+      a.addEventListener('click', () => nav.classList.remove('open'));
+    });
+
+    // Charger les repos GitHub de l'utilisateur et afficher comme projets
+    async function loadRepos() {
+      const username = 'keinest';
+      const container = document.getElementById('projects-list');
+      container.innerHTML = '<p>Chargement des projets…</p>';
+
+      try {
+        const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
+        if (!res.ok) throw new Error('GitHub API error ' + res.status);
+        const repos = await res.json();
+
+        // Filtrer: exclure forks et les repo vides
+        const filtered = repos.filter(r => !r.fork && (r.description || r.homepage || r.language));
+        if (filtered.length === 0) {
+          container.innerHTML = '<p>Aucun projet public trouvé.</p>';
+          return;
+        }
+
+        container.innerHTML = '';
+        filtered.forEach(r => {
+          const el = document.createElement('article');
+          el.className = 'project-card';
+
+          const img = document.createElement('img');
+          // Placeholder image: utiliser 2.png/3.png si disponibles, sinon une couleur
+          img.src = '2.png';
+          img.alt = r.name + ' — aperçu';
+
+          const body = document.createElement('div');
+          body.className = 'card-body';
+
+          const h3 = document.createElement('h3');
+          h3.textContent = r.name;
+
+          const p = document.createElement('p');
+          p.textContent = r.description || (r.language ? ('Langage: '+r.language) : 'Projet GitHub');
+
+          const links = document.createElement('p');
+          const repoLink = document.createElement('a');
+          repoLink.href = r.html_url;
+          repoLink.textContent = 'Code';
+          repoLink.className = 'card-link';
+          repoLink.target = '_blank';
+          repoLink.rel = 'noopener noreferrer';
+
+          links.appendChild(repoLink);
+
+          if (r.homepage) {
+            const sep = document.createTextNode(' · ');
+            const live = document.createElement('a');
+            live.href = r.homepage;
+            live.textContent = 'Live';
+            live.className = 'card-link';
+            live.target = '_blank';
+            live.rel = 'noopener noreferrer';
+            links.appendChild(sep);
+            links.appendChild(live);
+          }
+
+          body.appendChild(h3);
+          body.appendChild(p);
+          body.appendChild(links);
+
+          el.appendChild(img);
+          el.appendChild(body);
+
+          container.appendChild(el);
+        });
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = '<p>Impossible de charger les projets depuis GitHub. Vérifiez votre connexion ou réessayez plus tard.</p>';
+      }
+    }
+
+    // Lancer au chargement
+    loadRepos();
   </script>
 </body>
 </html>
