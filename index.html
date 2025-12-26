@@ -1,131 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Professionnel de KEÏNEST NGNOMBOUEPO PEDEDZOUE - Cybersécurité & Développement</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>keinest — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>KEÏNEST NGNOMBOUEPO PEDEDZOUE</h1>
-            <p class="job-title">**Aspirant Pentester | Développeur Informatique Polyvalent**</p>
-            <div class="contact-info">
-                <span> 1604, Yaoundé</span>
-                <span> +237 6 73 26 28 38</span>
-                <span>
-                    
-                    <a href="mailto:linedevils271@gmail.com?subject=Demande%20de%20contact%20depuis%20votre%20portfolio" class="email-link">linedevils271@gmail.com</a>
-                </span>
-            </div>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">keinest</a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Créer des produits numériques clairs et robustes</h1>
+          <p class="lede">Designer & développeur front‑end — j'aide les équipes à transformer des idées en expériences web utiles, accessibles et rapides.</p>
+          <p class="cta"><a href="#projects" class="btn">Voir mes projets</a> <a href="#contact" class="btn btn-outline">Me contacter</a></p>
         </div>
-    </header>
+        <img src="1.png" alt="Aperçu de projet" class="hero-image">
+      </div>
+    </section>
 
-    <main class="container">
-        <section id="profil" class="section">
-            <h2>PROFIL PROFESSIONNEL</h2>
-            <p class="profile-description">
-                **Pentester aspirant** et très motivé avec une expérience pratique des outils et techniques de cybersécurité. Actuellement étudiant en informatique, désireux d'appliquer et d'élargir ses connaissances en **sécurité réseaux, 
-                évaluation des vulnérabilités et hacking éthique**. Possède également des compétences avérées en **développement d'applications (Java, Flutter/Dart)** et en **développement web (Python, JavaScript)**.
-                Autonome, rigoureux et orienté solution, mes expériences m’ont permis de renforcer mes acquis et d’appréhender les différents outils et techniques de Hacking éthique. En quête de nouveaux challenges, 
-                je souhaite rejoindre une organisation à laquelle je pourrais apporter mon dynamisme, mes compétences techniques et mon goût du challenge.
-            </p>
-        </section>
+    <section id="about" class="section container">
+      <h2>À propos</h2>
+      <p>Je suis keinest — je conçois et développe des interfaces web modernes, centrées sur l'utilisateur. J'attache une grande importance à l'accessibilité, à la performance et à la simplicité.</p>
+    </section>
 
-        <section id="competences" class="section">
-            <h2>COMPÉTENCES TECHNIQUES & NOTIONS</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🛡️ Cybersécurité & Hacking Éthique</h3>
-                    <ul>
-                        <li>**Tests d'Intrusion (Pentesting) :** Méthodologies et réalisation en environnement local.</li>
-                        <li>**Outils Clés :** Metasploit-framework, SEToolkit, Msfvenom, **Nmap** (Cartographie/Scan), **John the Ripper** (Audit de Mots de Passe), Hydra.</li>
-                        <li>**Analyse de Vulnérabilités :** Identification et exploitation (notions de bases) ; Vulnérabilités des réseaux sans fil.</li>
-                        <li>**Notions en Cyber Sécurité :** Sécurité des systèmes, Cryptographie, Sécurité Réseaux (Pare-feu, VPN), Principes de défense en profondeur, **Sécurité des Applications Web**.</li>
-                        <li>**OS & Protocoles :** Linux (Kali, Parrot), Windows, SSH, SCP.</li>
-                    </ul>
-                </div>
+    <section id="projects" class="section container">
+      <h2>Projets récents</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="2.png" alt="Projet 1">
+          <h3>Projet 1 — Titre</h3>
+          <p>Une courte description du projet, le problème résolu et les technologies utilisées.</p>
+          <a class="card-link" href="#">En savoir plus</a>
+        </article>
 
-                <div class="skill-category">
-                    <h3>💻 Développement Logiciel & Web</h3>
-                    <ul>
-                        <li>**Java (Applications de bureau) :** Conception et développement d'applications standalone.</li>
-                        <li>**Dart (Flutter) :** Développement d'applications mobiles multiplateformes.</li>
-                        <li>**Python :** Scripting (automatisation/sécurité), Développement backend (notions).</li>
-                        <li>**JavaScript :** Développement Front-end (Interactivité web).</li>
-                        <li>**Développement Web :** Maîtrise de base HTML/CSS/JS.</li>
-                        <li>**Langage C :** Programmation système (notions).</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>🌟 Qualités Personnelles</h3>
-                    <ul>
-                        <li>**Rigueur** et **Sens des responsabilités** (essentiel en sécurité).</li>
-                        <li>**Autonomie** et **Sens de l’initiative**.</li>
-                        <li>Capacité d'apprentissage rapide et adaptation.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <article class="project-card">
+          <img src="3.png" alt="Projet 2">
+          <h3>Projet 2 — Titre</h3>
+          <p>Une courte description du projet, le rôle joué et les résultats obtenus.</p>
+          <a class="card-link" href="#">En savoir plus</a>
+        </article>
+      </div>
+    </section>
 
-        <section id="experience" class="section">
-            <h2>PARCOURS PROFESSIONNEL</h2>
-            <div class="timeline-item">
-                <h3>PENTESTER ASPIRANT (Projets personnels & Formation)</h3>
-                <p class="date">01/2023 - présent</p>
-                <ul>
-                    <li>Acquisition d’une expérience pratique dans la réalisation des tests d’intrusion en environnement local simulé.</li>
-                    <li>Application de divers outils et techniques pour identifier et exploiter les vulnérabilités (phases d'énumération, d'exploitation).</li>
-                    <li>Veille technologique constante sur les menaces et les nouvelles failles de sécurité.</li>
-                </ul>
-            </div>
-        </section>
+    <section id="skills" class="section container">
+      <h2>Compétences</h2>
+      <ul class="skills">
+        <li>Design d'interface</li>
+        <li>HTML / CSS modernes</li>
+        <li>JavaScript / React</li>
+        <li>Accessibilité (a11y)</li>
+        <li>Optimisation des performances</li>
+      </ul>
+    </section>
 
-        <section id="formation" class="section">
-            <h2>FORMATION</h2>
-            <div class="timeline-item">
-                <h3>Université de Yaoundé I, Yaoundé, Cameroun</h3>
-                <p class="date">Depuis 01/2024</p>
-                <p>**Licence : Informatique (Actuellement)** </p>
-            </div>
-            <div class="timeline-item">
-                <h3>Lycée Classique de Nkolbisson</h3>
-                <p class="date">01/2023</p>
-                <p>**Baccalauréat de l’Enseignement Général** (Série scientifique/technologique, si applicable).</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Lycée Classique de Nkolbisson</h3>
-                <p class="date">01/2021</p>
-                <p>Probatoire de l’Enseignement Général</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Lycée Classique de Nkolbisson</h3>
-                <p class="date">01/2019</p>
-                <p>BEPC</p>
-            </div>
-        </section>
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Envoyez un message via : <a href="mailto:keinest@example.com">keinest@example.com</a> ou retrouvez-moi sur <a href="https://github.com/keinest">GitHub</a>.</p>
+    </section>
+  </main>
 
-        <section id="langues" class="section">
-            <h2>LANGUES</h2>
-            <p>**Français** (Langue maternelle / Courant)</p>
-        </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 keinest · Site professionnel</p>
+    </div>
+  </footer>
 
-        <section id="interets" class="section">
-            <h2>CENTRES D'INTÉRÊT</h2>
-            <div class="interest-list">
-                <p>**Programmation** (Veille, Projets personnels)</p>
-                <p>Musique</p>
-                <p>Chant</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Keinest Ngnombouepo Pededzoué. Tous droits réservés. | Conçu pour un usage professionnel.</p>
-    </footer>
-
-    </body>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function(){
+      document.querySelector('.nav').classList.toggle('open');
+    });
+  </script>
+</body>
 </html>
