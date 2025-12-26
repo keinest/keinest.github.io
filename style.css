@@ -23,7 +23,6 @@ body{
   padding-bottom:40px;
 }
 
-/* Layout */
 .container{
   max-width:var(--container);
   margin:0 auto;
@@ -60,7 +59,6 @@ body{
   cursor:pointer;
 }
 
-/* Navigation */
 .nav ul{
   display:flex;
   gap:18px;
@@ -81,7 +79,6 @@ body{
   outline: none;
 }
 
-/* Hero */
 .hero{
   padding:48px 0;
 }
@@ -110,7 +107,6 @@ body{
   border: 1px solid rgba(255,255,255,0.03);
 }
 
-/* Buttons */
 .btn{
   display:inline-block;
   background:linear-gradient(90deg,var(--accent),#00a8c6);
@@ -127,7 +123,6 @@ body{
   color:var(--text);
 }
 
-/* Sections */
 .section{
   padding:40px 0;
 }
@@ -136,7 +131,6 @@ body{
   font-size:1.25rem;
 }
 
-/* Projects grid */
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -163,14 +157,31 @@ body{
 }
 .project-card:hover{transform:translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.6)}
 
-/* Skills */
-.skills{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:12px 0 0 0;list-style:none}
-.skills li{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 12px 0 0 0;
+  list-style: none;
+}
+.skills li {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(255, 71, 87, 0.1));
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+.security-badge {
+  background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(220, 38, 38, 0.1)) !important;
+  color: #ff4757 !important;
+  border-color: rgba(255, 71, 87, 0.3) !important;
+}
 
-/* Footer */
 .site-footer{margin-top:36px;padding:18px 0;color:var(--muted);text-align:center;font-size:0.95rem}
 
-/* Responsive */
 @media (max-width:980px){
   .hero-grid{grid-template-columns:1fr; text-align:left}
   .hero-media{order:2}
@@ -186,5 +197,4 @@ body{
   .site-header .container{padding:12px 18px}
 }
 
-/* Focus states */
 a:focus, button:focus{outline:3px solid rgba(6,182,212,0.18); outline-offset:3px; border-radius:6px}
