@@ -166,6 +166,7 @@ body
 }
 .project-card:hover{transform:translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.6)}
 
+/* ancienne classe .skills conservée pour la section contact */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -301,3 +302,45 @@ body
 }
 
 a:focus, button:focus{outline:3px solid rgba(6,182,212,0.18); outline-offset:3px; border-radius:6px}
+
+/* ===== Nouveaux styles pour les catégories de compétences ===== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 12px 0 0 0;
+  list-style: none;
+}
+.skills-list li {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(255, 71, 87, 0.1));
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.skills-category {
+  margin-bottom: 32px;
+}
+.skills-category h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 8px;
+  color: var(--text);
+}
+
+.sub-category {
+  margin-bottom: 20px;
+}
+.sub-category h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
