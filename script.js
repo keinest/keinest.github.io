@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function()
     	});
   	}
 
-  	// Chargement des repos GitHub
   	loadRepos();
 });
 
