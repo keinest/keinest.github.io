@@ -1,4 +1,5 @@
-:root{
+:root
+{
   --bg: #0f1720;
   --card: #0b1220;
   --muted: #9aa4b2;
@@ -11,8 +12,10 @@
 }
 
 *{box-sizing:border-box}
+
 html,body{height:100%}
-body{
+body
+{
   margin:0;
   font-family:var(--ff);
   background: linear-gradient(180deg,#071021 0%, #071826 100%);
@@ -23,13 +26,15 @@ body{
   padding-bottom:40px;
 }
 
-.container{
+.container
+{
   max-width:var(--container);
   margin:0 auto;
   padding:24px;
 }
 
-.site-header{
+.site-header
+{
   position:sticky;
   top:0;
   background:rgba(7,18,33,0.6);
@@ -37,12 +42,14 @@ body{
   border-bottom:1px solid rgba(255,255,255,0.03);
   z-index:40;
 }
+
 .site-header .container{
   display:flex;
   align-items:center;
   gap:16px;
   justify-content:space-between;
 }
+
 .logo{
   font-weight:700;
   text-decoration:none;
@@ -82,7 +89,9 @@ body{
 .hero{
   padding:48px 0;
 }
-.hero-grid{
+
+.hero-grid
+{
   display:grid;
   grid-template-columns:1fr 420px;
   gap:32px;
@@ -178,6 +187,100 @@ body{
   background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(220, 38, 38, 0.1)) !important;
   color: #ff4757 !important;
   border-color: rgba(255, 71, 87, 0.3) !important;
+}
+
+/* Security tag (anciennement dans le HTML) */
+.security-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff4757, #ff3838);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Animation pulse pour les compétences */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.skills li:hover {
+  animation: pulse 0.5s ease;
+}
+
+/* Styles du formulaire de contact */
+.contact-form {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.03);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.2);
+  color: var(--text);
+  font-family: var(--ff);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(6,182,212,0.2);
+}
+
+.contact-form button[type="submit"] {
+  background: linear-gradient(90deg, var(--accent), #00a8c6);
+  border: none;
+  color: #02111a;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+
+.contact-form button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+/* Amélioration des liens de contact */
+.skills li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.skills li a:hover {
+  text-decoration: underline;
 }
 
 .site-footer{margin-top:36px;padding:18px 0;color:var(--muted);text-align:center;font-size:0.95rem}
