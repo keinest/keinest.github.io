@@ -1,163 +1,205 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>keinest - Pentester & Développeur Sécurité</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <a class="logo" href="/">keinest<span class="security-tag">Pentester</span></a>
-        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-        <nav class="nav" aria-label="Navigation principale">
-          <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>keinest - Pentester & Développeur Sécurité</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">keinest<span class="security-tag">Pentester</span></a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section id="hero" class="hero">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <h1>Sécurité Offensive & Développement Web</h1>
-            <p class="lede">Pentester passionné — Je recherche des vulnérabilités et développe des outils pour renforcer la sécurité des systèmes. Compétences en front-end (HTML/CSS, JS, Bootstrap) et back-end (Python/Django, Flask).</p>
-            <p class="cta">
-              <a href="#projects" class="btn">Voir mes projets</a>
-              <a href="https://tryhackme.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+  <main>
+    <!-- Section Hero -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Sécurité Offensive & Développement Web</h1>
+          <p class="lede">Pentester passionné — Je recherche des vulnérabilités et développe des outils pour renforcer la sécurité des systèmes. Compétences en front-end (HTML/CSS, JS, Bootstrap) et back-end (Python/Django, Flask).</p>
+          <p class="cta">
+            <a href="#projects" class="btn">Voir mes projets</a>
+            <a href="https://tryhackme.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">TryHackMe</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Interface d'analyse de sécurité" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="section container">
+      <h2>À propos</h2>
+      <p>Je suis <strong>keinest</strong> — passionné par la cybersécurité et le développement web. Mon objectif : devenir <strong>Pentester professionnel</strong> tout en maîtrisant les technologies du web pour créer des outils de sécurité et des applications robustes.</p>
+      <p>Ma double compétence me permet de comprendre à la fois les failles des applications et la manière de les développer de façon sécurisée.</p>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="section container">
+      <h2>Projets & Réalisations</h2>
+      <div id="projects-list" class="projects-grid" aria-live="polite">
+        <!-- Les projets statiques sont déjà inclus, les repos GitHub seront ajoutés dynamiquement -->
+        <article class="project-card">
+          <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Projet de sécurité - Capture d'écran">
+          <div class="card-body">
+            <h3>Laboratoire Sécurité</h3>
+            <p>Environnement virtuel pour pratiquer les tests d'intrusion et l'analyse de vulnérabilités.</p>
+            <p>
+              <a href="#" class="card-link">GitHub</a>
+              <span> · </span>
+              <span style="color: var(--accent); font-weight: 600;">Sécurité</span>
             </p>
           </div>
-          <div class="hero-media">
-            <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Interface d'analyse de sécurité" class="hero-image">
+        </article>
+
+        <article class="project-card">
+          <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Script d'automatisation">
+          <div class="card-body">
+            <h3>Outils Python</h3>
+            <p>Collection de scripts Python pour l'automatisation de tests de sécurité et l'analyse réseau.</p>
+            <p>
+              <a href="#" class="card-link">GitHub</a>
+              <span> · </span>
+              <span style="color: var(--accent); font-weight: 600;">Python</span>
+            </p>
           </div>
-        </div>
-      </section>
+        </article>
+      </div>
+    </section>
 
-      <section id="about" class="section container">
-        <h2>À propos</h2>
-        <p>Je suis <strong>keinest</strong> — passionné par la cybersécurité et le développement web. Mon objectif : devenir <strong>Pentester professionnel</strong> tout en maîtrisant les technologies du web pour créer des outils de sécurité et des applications robustes.</p>
-        <p>Ma double compétence me permet de comprendre à la fois les failles des applications et la manière de les développer de façon sécurisée.</p>
-      </section>
+    <!-- Section Compétences (réorganisée) -->
+    <section id="skills" class="section container">
+      <h2>Compétences Techniques</h2>
 
-      <section id="projects" class="section container">
-        <h2>Projets & Réalisations</h2>
-        <div id="projects-list" class="projects-grid" aria-live="polite">
-          <!-- Les projets statiques sont déjà inclus, les repos GitHub seront ajoutés dynamiquement -->
-          <article class="project-card">
-            <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Projet de sécurité - Capture d'écran">
-            <div class="card-body">
-              <h3>Laboratoire Sécurité</h3>
-              <p>Environnement virtuel pour pratiquer les tests d'intrusion et l'analyse de vulnérabilités.</p>
-              <p>
-                <a href="#" class="card-link">GitHub</a>
-                <span> · </span>
-                <span style="color: var(--accent); font-weight: 600;">Sécurité</span>
-              </p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Script d'automatisation">
-            <div class="card-body">
-              <h3>Outils Python</h3>
-              <p>Collection de scripts Python pour l'automatisation de tests de sécurité et l'analyse réseau.</p>
-              <p>
-                <a href="#" class="card-link">GitHub</a>
-                <span> · </span>
-                <span style="color: var(--accent); font-weight: 600;">Python</span>
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section container">
-        <h2>Compétences Techniques</h2>
-        <ul class="skills">
-          <!-- Compétences cybersécurité -->
+      <!-- Cybersécurité -->
+      <div class="skills-category">
+        <h3>Cybersécurité</h3>
+        <ul class="skills-list">
           <li class="security-badge">Cybersécurité Offensive</li>
           <li class="security-badge">Test d'Intrusion</li>
           <li class="security-badge">Analyse de Vulnérabilités</li>
           <li class="security-badge">Reverse Engineering</li>
           <li class="security-badge">OWASP Top 10</li>
-          <!-- Langages de programmation -->
+        </ul>
+      </div>
+
+      <!-- Développement Web -->
+      <div class="skills-category">
+        <h3>Développement Web</h3>
+        <div class="sub-category">
+          <h4>Front‑end</h4>
+          <ul class="skills-list">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+        <div class="sub-category">
+          <h4>Back‑end</h4>
+          <ul class="skills-list">
+            <li>Django</li>
+            <li>Flask</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Programmation -->
+      <div class="skills-category">
+        <h3>Programmation</h3>
+        <ul class="skills-list">
           <li>C</li>
           <li>Java</li>
           <li>Python</li>
-          <!-- Développement web (front-end) -->
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>Bootstrap</li>
-          <!-- Développement web (back-end) -->
-          <li>Django</li>
-          <li>Flask</li>
-          <!-- Réseaux & systèmes -->
-          <li>Protocoles Réseaux Sans fils</li>
+        </ul>
+      </div>
+
+      <!-- Réseaux & Systèmes -->
+      <div class="skills-category">
+        <h3>Réseaux & Systèmes</h3>
+        <ul class="skills-list">
+          <li>Protocoles Réseaux Sans fil</li>
           <li>Linux / Administration Système</li>
         </ul>
-      </section>
-
-      <section id="contact" class="section container">
-        <h2>Contact & Réseaux</h2>
-        <p>Ouvert aux opportunités en cybersécurité, stages ou collaborations :</p>
-        
-        <!-- Formulaire de contact par email (mailto) -->
-        <div>
-          <h3 style="margin-bottom: 15px;">Envoyez-moi un message</h3>
-          <form action="mailto:linedevils271@gmail.com" method="post" enctype="text/plain" class="contact-form">
-            <div class="form-group">
-              <label for="name">Nom</label>
-              <input type="text" id="name" name="name" placeholder="Votre nom" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Votre email</label>
-              <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-            </div>
-            <button type="submit" class="btn">Envoyer par email</button>
-          </form>
-        </div>
-
-        <!-- Contact WhatsApp -->
-        <div style="margin: 30px 0; text-align: center;">
-          <h3>Ou contactez-moi directement</h3>
-          <a href="https://wa.me/237673262834" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-        </div>
-
-        <!-- Liens sociaux avec icônes -->
-        <ul class="skills" style="margin-top: 20px; justify-content: center;">
-          <li><a href="mailto:linedevils271@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-          <li><a href="https://github.com/keinest" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
-          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          <li><a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-shield-alt"></i> TryHackMe</a></li>
-          <li><a href="https://www.hackthebox.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i> HackTheBox</a></li>
-        </ul>
-
-        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">
-          <em>Note : Tous les tests de sécurité sont effectués dans des environnements contrôlés et autorisés.</em>
-        </p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 keinest · Pentester & Développeur · 
-          <a href="https://creativecommons.org/licenses/by-nc/4.0/" style="color: var(--muted); text-decoration: none;" target="_blank" rel="noopener noreferrer">Éthique & Responsabilité</a>
-        </p>
       </div>
-    </footer>
 
-    <script src="script.js" defer></script>
-  </body>
+      <!-- Marketing Digital -->
+      <div class="skills-category">
+        <h3>Marketing Digital</h3>
+        <ul class="skills-list">
+          <li>Notions de base (SEO, Analytics, Réseaux sociaux)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section container">
+      <h2>Contact & Réseaux</h2>
+      <p>Ouvert aux opportunités en cybersécurité, stages ou collaborations :</p>
+
+      <!-- Formulaire de contact par email (mailto) -->
+      <div>
+        <h3 style="margin-bottom: 15px;">Envoyez-moi un message</h3>
+        <form action="mailto:linedevils271@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Envoyer par email</button>
+        </form>
+      </div>
+
+      <!-- Contact WhatsApp -->
+      <div style="margin: 30px 0; text-align: center;">
+        <h3>Ou contactez-moi directement</h3>
+        <a href="https://wa.me/237673262834" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Liens sociaux avec icônes -->
+      <ul class="skills" style="margin-top: 20px; justify-content: center;">
+        <li><a href="mailto:linedevils271@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+        <li><a href="https://github.com/keinest" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-shield-alt"></i> TryHackMe</a></li>
+        <li><a href="https://www.hackthebox.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i> HackTheBox</a></li>
+      </ul>
+
+      <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">
+        <em>Note : Tous les tests de sécurité sont effectués dans des environnements contrôlés et autorisés.</em>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 keinest · Pentester & Développeur · 
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" style="color: var(--muted); text-decoration: none;" target="_blank" rel="noopener noreferrer">Éthique & Responsabilité</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
