@@ -1,205 +1,801 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>keinest - Pentester & Développeur Sécurité</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soulking — Développeur Full Stack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Clash+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="/">keinest<span class="security-tag">Pentester</span></a>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="nav" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+  <!-- CURSOR -->
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- LOADER -->
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SK</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span class="loader-text">Initialisation...</span>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <!-- Section Hero -->
-    <section id="hero" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1>Sécurité Offensive & Développement Web</h1>
-          <p class="lede">Pentester passionné — Je recherche des vulnérabilités et développe des outils pour renforcer la sécurité des systèmes. Compétences en front-end (HTML/CSS, JS, Bootstrap) et back-end (Python/Django, Flask).</p>
-          <p class="cta">
-            <a href="#projects" class="btn">Voir mes projets</a>
-            <a href="https://tryhackme.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">TryHackMe</a>
-          </p>
-        </div>
-        <div class="hero-media">
-          <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Interface d'analyse de sécurité" class="hero-image">
-        </div>
+  <!-- NAVBAR -->
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SoulKing<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Témoignages</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section id="hero">
+    <div class="hero-bg">
+      <canvas id="heroCanvas"></canvas>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponible pour missions & projets
       </div>
-    </section>
-
-    <!-- Section À propos -->
-    <section id="about" class="section container">
-      <h2>À propos</h2>
-      <p>Je suis <strong>keinest</strong> — passionné par la cybersécurité et le développement web. Mon objectif : devenir <strong>Pentester professionnel</strong> tout en maîtrisant les technologies du web pour créer des outils de sécurité et des applications robustes.</p>
-      <p>Ma double compétence me permet de comprendre à la fois les failles des applications et la manière de les développer de façon sécurisée.</p>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projects" class="section container">
-      <h2>Projets & Réalisations</h2>
-      <div id="projects-list" class="projects-grid" aria-live="polite">
-        <!-- Les projets statiques sont déjà inclus, les repos GitHub seront ajoutés dynamiquement -->
-        <article class="project-card">
-          <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Projet de sécurité - Capture d'écran">
-          <div class="card-body">
-            <h3>Laboratoire Sécurité</h3>
-            <p>Environnement virtuel pour pratiquer les tests d'intrusion et l'analyse de vulnérabilités.</p>
-            <p>
-              <a href="#" class="card-link">GitHub</a>
-              <span> · </span>
-              <span style="color: var(--accent); font-weight: 600;">Sécurité</span>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img src="b1cc20b7f0115bc41472288edac2abe9.jpg" alt="Script d'automatisation">
-          <div class="card-body">
-            <h3>Outils Python</h3>
-            <p>Collection de scripts Python pour l'automatisation de tests de sécurité et l'analyse réseau.</p>
-            <p>
-              <a href="#" class="card-link">GitHub</a>
-              <span> · </span>
-              <span style="color: var(--accent); font-weight: 600;">Python</span>
-            </p>
-          </div>
-        </article>
+      <div class="hero-greeting">Bonjour, je suis</div>
+      <h1 class="hero-name">
+        <span class="name-first">Keinest</span>
+        <span class="name-alias"> · <em>Soulking</em></span>
+      </h1>
+      <div class="hero-title-wrap">
+        <span class="hero-title-prefix">// </span>
+        <span id="typingText" class="hero-title-typed"></span>
+        <span class="typing-cursor">|</span>
       </div>
-    </section>
-
-    <!-- Section Compétences (réorganisée) -->
-    <section id="skills" class="section container">
-      <h2>Compétences Techniques</h2>
-
-      <!-- Cybersécurité -->
-      <div class="skills-category">
-        <h3>Cybersécurité</h3>
-        <ul class="skills-list">
-          <li class="security-badge">Cybersécurité Offensive</li>
-          <li class="security-badge">Test d'Intrusion</li>
-          <li class="security-badge">Analyse de Vulnérabilités</li>
-          <li class="security-badge">Reverse Engineering</li>
-          <li class="security-badge">OWASP Top 10</li>
-        </ul>
-      </div>
-
-      <!-- Développement Web -->
-      <div class="skills-category">
-        <h3>Développement Web</h3>
-        <div class="sub-category">
-          <h4>Front‑end</h4>
-          <ul class="skills-list">
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>Bootstrap</li>
-          </ul>
+      <p class="hero-desc">
+        Développeur Full Stack passionné basé à <strong>Yaoundé, Cameroun</strong>. 
+        Je conçois des applications web et mobiles robustes, sécurisées et scalables — 
+        du pixel au serveur, en passant par le cloud.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Yaoundé, Cameroun</span>
         </div>
-        <div class="sub-category">
-          <h4>Back‑end</h4>
-          <ul class="skills-list">
-            <li>Django</li>
-            <li>Flask</li>
-          </ul>
+        <div class="meta-item">
+          <i class="fas fa-code"></i>
+          <span>4 ans d'expérience</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-circle status-dot"></i>
+          <span>Disponible</span>
         </div>
       </div>
-
-      <!-- Programmation -->
-      <div class="skills-category">
-        <h3>Programmation</h3>
-        <ul class="skills-list">
-          <li>C</li>
-          <li>Java</li>
-          <li>Python</li>
-        </ul>
-      </div>
-
-      <!-- Réseaux & Systèmes -->
-      <div class="skills-category">
-        <h3>Réseaux & Systèmes</h3>
-        <ul class="skills-list">
-          <li>Protocoles Réseaux Sans fil</li>
-          <li>Linux / Administration Système</li>
-        </ul>
-      </div>
-
-      <!-- Marketing Digital -->
-      <div class="skills-category">
-        <h3>Marketing Digital</h3>
-        <ul class="skills-list">
-          <li>Notions de base (SEO, Analytics, Réseaux sociaux)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="section container">
-      <h2>Contact & Réseaux</h2>
-      <p>Ouvert aux opportunités en cybersécurité, stages ou collaborations :</p>
-
-      <!-- Formulaire de contact par email (mailto) -->
-      <div>
-        <h3 style="margin-bottom: 15px;">Envoyez-moi un message</h3>
-        <form action="mailto:linedevils271@gmail.com" method="post" enctype="text/plain" class="contact-form">
-          <div class="form-group">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Votre email</label>
-            <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-          </div>
-          <button type="submit" class="btn">Envoyer par email</button>
-        </form>
-      </div>
-
-      <!-- Contact WhatsApp -->
-      <div style="margin: 30px 0; text-align: center;">
-        <h3>Ou contactez-moi directement</h3>
-        <a href="https://wa.me/237673262834" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> WhatsApp
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Voir mes projets
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Me contacter
+        </a>
+        <a href="https://github.com/keinest" target="_blank" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub
         </a>
       </div>
+      <div class="hero-scroll">
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+    </div>
 
-      <!-- Liens sociaux avec icônes -->
-      <ul class="skills" style="margin-top: 20px; justify-content: center;">
-        <li><a href="mailto:linedevils271@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-        <li><a href="https://github.com/keinest" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
-        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-shield-alt"></i> TryHackMe</a></li>
-        <li><a href="https://www.hackthebox.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i> HackTheBox</a></li>
-      </ul>
+    <!-- PHOTO CONTAINER -->
 
-      <p style="margin-top: 20px; font-size: 0.9rem; color: var(--muted);">
-        <em>Note : Tous les tests de sécurité sont effectués dans des environnements contrôlés et autorisés.</em>
-      </p>
-    </section>
-  </main>
+    <div class="hero-photo-wrapper">
+      <div class="photo-frame">
+        <div class="photo-glow"></div>
+        <img src="assets/IMG_20260105_084727_915.jpg" alt="Keinest Soulking" class="hero-photo" 
+             onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex'"/>
+        <div id="photoFallback" class="photo-fallback">SK</div>
+        <div class="photo-border-animated"></div>
+      </div>
+      <div class="photo-stats">
+        <div class="stat-pill"><span class="stat-num" data-target="4">0</span><small>Ans exp.</small></div>
+        <div class="stat-pill"><span class="stat-num" data-target="30">0</span><small>Projets+</small></div>
+        <div class="stat-pill"><span class="stat-num" data-target="15">0</span><small>Clients</small></div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="site-footer">
+  <!-- ABOUT -->
+
+  <section id="about">
     <div class="container">
-      <p>© 2025 keinest · Pentester & Développeur · 
-        <a href="https://creativecommons.org/licenses/by-nc/4.0/" style="color: var(--muted); text-decoration: none;" target="_blank" rel="noopener noreferrer">Éthique & Responsabilité</a>
-      </p>
+      <div class="section-header">
+        <span class="section-tag">01 / À propos</span>
+        <h2 class="section-title">Qui suis-je ?</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Je suis <strong>Keinest</strong>, alias <strong>Soulking</strong> — Développeur Full Stack avec <strong>4 ans d'expérience</strong> dans la conception et le développement d'applications web et mobiles. Basé à Yaoundé, Cameroun, j'interviens sur des projets locaux et internationaux.
+          </p>
+          <p>
+            Mon approche ? Écrire du code <strong>propre, sécurisé et maintenable</strong>. Je couvre l'intégralité de la chaîne : de la conception UI/UX jusqu'au déploiement cloud, en passant par la sécurité, les bases de données et les APIs.
+          </p>
+          <p>
+            Au-delà du développement, je maîtrise le <strong>marketing digital</strong> et la <strong>cybersécurité réseau</strong> — des compétences qui me permettent d'offrir une vision à 360° sur vos projets numériques.
+          </p>
+          <div class="about-tags">
+            <span class="tag"><i class="fas fa-shield-alt"></i> Sécurité Web</span>
+            <span class="tag"><i class="fas fa-wifi"></i> Sécurité Réseau</span>
+            <span class="tag"><i class="fas fa-chart-line"></i> Marketing Digital</span>
+            <span class="tag"><i class="fas fa-cloud"></i> Cloud & DevOps</span>
+            <span class="tag"><i class="fas fa-mobile-alt"></i> Mobile Dev</span>
+          </div>
+        </div>
+        <div class="about-info-card">
+          <div class="info-row"><span class="info-label">Nom</span><span class="info-val">Keinest · <em>Soulking</em></span></div>
+          <div class="info-row"><span class="info-label">Localisation</span><span class="info-val"><i class="fas fa-map-pin"></i> Yaoundé, Cameroun</span></div>
+          <div class="info-row"><span class="info-label">Expérience</span><span class="info-val">4 ans</span></div>
+          <div class="info-row"><span class="info-label">Email</span><span class="info-val"><a href="mailto:linedevils271@gmail.com">linedevils271@gmail.com</a></span></div>
+          <div class="info-row"><span class="info-label">WhatsApp</span><span class="info-val"><a href="https://wa.me/237673262834" target="_blank">+237 673 262 834</a></span></div>
+          <div class="info-row"><span class="info-label">GitHub</span><span class="info-val"><a href="https://github.com/keinest" target="_blank">github.com/keinest</a></span></div>
+          <div class="info-row"><span class="info-label">Statut</span><span class="info-val available"><span class="dot-pulse"></span> Disponible</span></div>
+          <a href="#contact" class="btn btn-primary btn-full mt-1">
+            <i class="fas fa-handshake"></i> Travaillons ensemble
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / Compétences</span>
+        <h2 class="section-title">Mon Stack Technique</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-tabs">
+        <button class="skill-tab active" data-tab="frontend">
+          <i class="fas fa-palette"></i> Front-end
+        </button>
+        <button class="skill-tab" data-tab="backend">
+          <i class="fas fa-server"></i> Back-end
+        </button>
+        <button class="skill-tab" data-tab="database">
+          <i class="fas fa-database"></i> Bases de données
+        </button>
+        <button class="skill-tab" data-tab="cloud">
+          <i class="fas fa-cloud"></i> Cloud & DevOps
+        </button>
+        <button class="skill-tab" data-tab="security">
+          <i class="fas fa-shield-alt"></i> Sécurité
+        </button>
+        <button class="skill-tab" data-tab="marketing">
+          <i class="fas fa-chart-line"></i> Marketing
+        </button>
+      </div>
+
+      <div class="skills-panels">
+
+        <!-- FRONTEND -->
+
+        <div class="skill-panel active" id="tab-frontend">
+          <div class="skill-cards">
+            <div class="skill-card" data-level="95">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/>
+              <span>HTML5</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+            </div>
+            <div class="skill-card" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/>
+              <span>CSS3</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="skill-card" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+              <span>JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="skill-card" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>
+              <span>TypeScript</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+            <div class="skill-card" data-level="92">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
+              <span>React.js</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+            </div>
+            <div class="skill-card" data-level="82">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native"/>
+              <span>React Native</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+            </div>
+            <div class="skill-card" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass"/>
+              <span>Sass / SCSS</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-card" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind"/>
+              <span>Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="skill-card" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"/>
+              <span>Bootstrap</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="skill-panel" id="tab-backend">
+          <div class="skill-cards">
+            <div class="skill-card" data-level="92">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
+              <span>Node.js</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+            </div>
+            <div class="skill-card" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
+              <span>Python / Django / Flask</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-card" data-level="80">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/>
+              <span>PHP / Laravel</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-card" data-level="78">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/>
+              <span>Java / Spring Boot</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+            </div>
+            <div class="skill-card" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL"/>
+              <span>REST & GraphQL</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+            <div class="skill-card" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="Socket.io"/>
+              <span>WebSockets / Socket.io</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-card" data-level="82">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express"/>
+              <span>JWT / OAuth2 / Auth</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DATABASE -->
+
+        <div class="skill-panel" id="tab-database">
+          <div class="skill-cards">
+            <div class="skill-card" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>
+              <span>PostgreSQL</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+            <div class="skill-card" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
+              <span>MySQL / MariaDB</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-card" data-level="82">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>
+              <span>MongoDB</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+            </div>
+            <div class="skill-card" data-level="80">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"/>
+              <span>Redis</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-card" data-level="78">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"/>
+              <span>Firebase / Firestore</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLOUD -->
+
+        <div class="skill-panel" id="tab-cloud">
+          <div class="skill-cards">
+            <div class="skill-card" data-level="82">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS"/>
+              <span>AWS (EC2, S3, Lambda…)</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+            </div>
+            <div class="skill-card" data-level="75">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"/>
+              <span>Google Cloud Platform</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+            </div>
+            <div class="skill-card" data-level="72">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"/>
+              <span>Microsoft Azure</span><div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+            </div>
+            <div class="skill-card" data-level="90">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>
+              <span>Docker / Compose</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="skill-card" data-level="88">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
+              <span>Git / GitHub CI/CD</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+            <div class="skill-card" data-level="80">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx"/>
+              <span>Nginx / Apache</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-card" data-level="85">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Tests"/>
+              <span>Jest / Cypress / Playwright</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECURITY -->
+
+        <div class="skill-panel" id="tab-security">
+          <div class="security-grid">
+            <div class="security-card">
+              <div class="sec-icon"><i class="fas fa-wifi"></i></div>
+              <h4>Sécurité Wi-Fi</h4>
+              <ul>
+                <li>Audit de réseaux sans fil (WEP/WPA/WPA2/WPA3)</li>
+                <li>Capture & analyse de handshakes</li>
+                <li>Attaques par dictionnaire / force brute</li>
+                <li>Evil Twin & Man-in-the-Middle (MITM)</li>
+                <li>Analyse de trafic réseau (Wireshark)</li>
+                <li>Outils : Aircrack-ng, Hashcat, Kali Linux</li>
+              </ul>
+            </div>
+            <div class="security-card">
+              <div class="sec-icon"><i class="fas fa-globe"></i></div>
+              <h4>Sécurité Web</h4>
+              <ul>
+                <li>OWASP Top 10 — injections SQL, XSS, CSRF</li>
+                <li>Gestion des CORS et headers HTTP</li>
+                <li>SSL/TLS — certificats & chiffrement</li>
+                <li>Authentification sécurisée (JWT, OAuth2)</li>
+                <li>Rate limiting & protection DDoS</li>
+                <li>Audit & pentest d'applications web</li>
+              </ul>
+            </div>
+            <div class="security-card">
+              <div class="sec-icon"><i class="fas fa-network-wired"></i></div>
+              <h4>Réseau & Infrastructure</h4>
+              <ul>
+                <li>Protocoles HTTP/HTTPS, DNS, TCP/IP</li>
+                <li>Reverse Proxy (Nginx, Apache)</li>
+                <li>CDN & Load Balancing</li>
+                <li>Firewalls & règles de sécurité</li>
+                <li>VPN & tunneling</li>
+                <li>Scan de ports & reconnaissance (Nmap)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- MARKETING -->
+
+        <div class="skill-panel" id="tab-marketing">
+          <div class="marketing-grid">
+            <div class="mkt-card">
+              <div class="mkt-icon"><i class="fas fa-search"></i></div>
+              <h4>SEO / SEA</h4>
+              <p>Référencement naturel et payant, Google Ads, Meta Ads. Optimisation des Core Web Vitals, balises méta, structure de données.</p>
+            </div>
+            <div class="mkt-card">
+              <div class="mkt-icon"><i class="fab fa-facebook-f"></i></div>
+              <h4>Social Media Marketing</h4>
+              <p>Stratégie de contenu, gestion de communautés, campagnes Facebook/Instagram/LinkedIn/TikTok Ads.</p>
+            </div>
+            <div class="mkt-card">
+              <div class="mkt-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <h4>Email Marketing</h4>
+              <p>Campagnes d'emailing, automation, newsletters, segmentation. Outils : Mailchimp, SendGrid, Brevo.</p>
+            </div>
+            <div class="mkt-card">
+              <div class="mkt-icon"><i class="fas fa-chart-bar"></i></div>
+              <h4>Analytics & Data</h4>
+              <p>Google Analytics 4, Search Console, Tag Manager, Hotjar. Tableaux de bord de performance et reporting.</p>
+            </div>
+            <div class="mkt-card">
+              <div class="mkt-icon"><i class="fas fa-funnel-dollar"></i></div>
+              <h4>Tunnel de vente / Growth</h4>
+              <p>Landing pages optimisées, A/B testing, stratégies d'acquisition, conversion et rétention client.</p>
+            </div>
+            <div class="mkt-card">
+              <div class="mkt-icon"><i class="fas fa-pen-nib"></i></div>
+              <h4>Content Marketing</h4>
+              <p>Création de contenu web, copywriting, stratégie éditoriale, branding et identité digitale.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end skills-panels -->
+    </div>
+  </section>
+
+  <!-- PROJECTS (GitHub API) -->
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / Projets</span>
+        <h2 class="section-title">Mes Projets GitHub</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">Chargés en temps réel depuis <a href="https://github.com/keinest" target="_blank">github.com/keinest</a></p>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="php">PHP</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+        <button class="filter-btn" data-filter="typescript">TypeScript</button>
+      </div>
+      <div id="projectsGrid" class="projects-grid">
+        <div class="projects-loader">
+          <div class="spin-ring"></div>
+          <p>Chargement des projets...</p>
+        </div>
+      </div>
+      <div class="projects-more">
+        <a href="https://github.com/keinest" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> Voir tous les dépôts
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / Services</span>
+        <h2 class="section-title">Ce que je propose</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">Des solutions complètes, de la conception au déploiement</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Développement Web Front-end</h3>
+          <p>Création d'interfaces modernes, réactives et accessibles avec React, TypeScript, Tailwind CSS. SPA, SSR, intégration de designs Figma.</p>
+          <ul class="service-features">
+            <li>Sites web & landing pages</li>
+            <li>Applications React / Next.js</li>
+            <li>Dashboards & back-offices</li>
+            <li>Animations & micro-interactions</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20pour%20du%20développement%20Front-end" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card featured">
+          <div class="service-badge">⭐ Populaire</div>
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h3>Développement Full Stack</h3>
+          <p>Conception et développement d'applications web complètes : front-end + back-end + base de données + déploiement cloud.</p>
+          <ul class="service-features">
+            <li>Applications web sur mesure</li>
+            <li>APIs REST & GraphQL</li>
+            <li>Authentification & sécurité</li>
+            <li>Intégration & déploiement CI/CD</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20Full%20Stack" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Application Mobile</h3>
+          <p>Développement d'applications cross-platform performantes avec React Native pour iOS et Android.</p>
+          <ul class="service-features">
+            <li>Apps iOS & Android (React Native)</li>
+            <li>Publication App Store / Play Store</li>
+            <li>Intégration APIs & paiements</li>
+            <li>Notifications push</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20pour%20une%20application%20mobile" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-plug"></i></div>
+          <h3>API & Intégrations</h3>
+          <p>Conception d'APIs REST et GraphQL, intégrations tierces (paiements, réseaux sociaux, services cloud, webhooks).</p>
+          <ul class="service-features">
+            <li>REST API & GraphQL</li>
+            <li>Intégrations Stripe, PayPal, etc.</li>
+            <li>WebSockets & temps réel</li>
+            <li>Documentation Swagger</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20API" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>DevOps & Cloud</h3>
+          <p>Déploiement, configuration et gestion d'infrastructure cloud sur AWS, GCP, Azure, Vercel ou Netlify.</p>
+          <ul class="service-features">
+            <li>Déploiement cloud (AWS, GCP, Azure)</li>
+            <li>Dockerisation & orchestration</li>
+            <li>CI/CD pipelines</li>
+            <li>Monitoring & logging</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20DevOps" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Base de données & Architecture</h3>
+          <p>Conception, optimisation et administration de bases de données SQL et NoSQL. Modélisation, migrations, performances.</p>
+          <ul class="service-features">
+            <li>PostgreSQL, MySQL, MongoDB</li>
+            <li>Optimisation & indexation</li>
+            <li>Migrations & backups</li>
+            <li>Architecture microservices</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20Base%20de%20données" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Audit de Sécurité</h3>
+          <p>Analyse de vulnérabilités web et réseau, pentest, conseils de renforcement et rapport détaillé.</p>
+          <ul class="service-features">
+            <li>Pentest d'applications web</li>
+            <li>Audit sécurité Wi-Fi / réseau</li>
+            <li>Correction de vulnérabilités</li>
+            <li>Rapport & recommandations</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20audit%20de%20sécurité" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Marketing Digital</h3>
+          <p>Stratégie et exécution de campagnes digitales : SEO, publicités sociales, email marketing, analytics.</p>
+          <ul class="service-features">
+            <li>SEO / SEA & Google Ads</li>
+            <li>Campagnes Facebook/Instagram Ads</li>
+            <li>Email marketing & automation</li>
+            <li>Analytics & reporting</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20devis%20Marketing%20Digital" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-wrench"></i></div>
+          <h3>Maintenance & Support</h3>
+          <p>Maintenance évolutive et corrective, mises à jour de sécurité, optimisation des performances et support technique.</p>
+          <ul class="service-features">
+            <li>Mises à jour & correctifs</li>
+            <li>Optimisation performances</li>
+            <li>Support technique réactif</li>
+            <li>Monitoring continu</li>
+          </ul>
+          <a href="https://wa.me/237673262834?text=Bonjour%20Soulking,%20je%20souhaite%20un%20contrat%20de%20maintenance" target="_blank" class="btn btn-service">
+            <i class="fas fa-paper-plane"></i> Demander un devis
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / Témoignages</span>
+        <h2 class="section-title">Ce que disent mes clients</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">Des retours authentiques laissés directement par mes clients</p>
+      </div>
+
+      <!-- Add testimonial form -->
+      <div class="testi-form-wrap">
+        <h3><i class="fas fa-comment-dots"></i> Laisser un témoignage</h3>
+        <form id="testiForm" class="testi-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="testiName">Votre nom *</label>
+              <input type="text" id="testiName" placeholder="Ex: Marie Dupont" required/>
+            </div>
+            <div class="form-group">
+              <label for="testiRole">Votre rôle / entreprise</label>
+              <input type="text" id="testiRole" placeholder="Ex: CEO chez TechCo"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Note *</label>
+            <div class="star-rating" id="starRating">
+              <span data-val="1"><i class="fas fa-star"></i></span>
+              <span data-val="2"><i class="fas fa-star"></i></span>
+              <span data-val="3"><i class="fas fa-star"></i></span>
+              <span data-val="4"><i class="fas fa-star"></i></span>
+              <span data-val="5"><i class="fas fa-star"></i></span>
+            </div>
+            <input type="hidden" id="testiRating" value="0"/>
+          </div>
+          <div class="form-group">
+            <label for="testiText">Votre témoignage *</label>
+            <textarea id="testiText" rows="4" placeholder="Partagez votre expérience de travail avec Soulking..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Soumettre mon témoignage
+          </button>
+          <p class="testi-note"><i class="fas fa-info-circle"></i> Votre témoignage sera visible après validation.</p>
+        </form>
+        <div id="testiSuccess" class="testi-success" style="display:none">
+          <i class="fas fa-check-circle"></i>
+          <h4>Merci pour votre témoignage !</h4>
+          <p>Il sera publié après validation. Merci de votre confiance.</p>
+        </div>
+      </div>
+
+      <!-- Testimonials display -->
+      <div id="testiGrid" class="testi-grid">
+        <div class="testi-empty">
+          <i class="fas fa-comments"></i>
+          <p>Aucun témoignage pour l'instant. Soyez le premier !</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / Contact</span>
+        <h2 class="section-title">Travaillons ensemble</h2>
+        <div class="section-line"></div>
+        <p class="section-sub">Un projet ? Une question ? Écrivez-moi !</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Contactez-moi directement</h3>
+          <div class="contact-cards">
+            <a href="mailto:linedevils271@gmail.com" class="contact-card">
+              <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+              <div class="cc-text">
+                <span>Email</span>
+                <strong>linedevils271@gmail.com</strong>
+              </div>
+            </a>
+            <a href="https://wa.me/237673262834" target="_blank" class="contact-card">
+              <div class="cc-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+              <div class="cc-text">
+                <span>WhatsApp</span>
+                <strong>+237 673 262 834</strong>
+              </div>
+            </a>
+            <a href="https://github.com/keinest" target="_blank" class="contact-card">
+              <div class="cc-icon github"><i class="fab fa-github"></i></div>
+              <div class="cc-text">
+                <span>GitHub</span>
+                <strong>github.com/keinest</strong>
+              </div>
+            </a>
+          </div>
+          <div class="contact-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Localisation</strong>
+              <span>Yaoundé, Cameroun</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cName">Nom *</label>
+              <input type="text" id="cName" placeholder="Votre nom" required/>
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email *</label>
+              <input type="email" id="cEmail" placeholder="votre@email.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cSubject">Sujet *</label>
+            <input type="text" id="cSubject" placeholder="Objet de votre message" required/>
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Message *</label>
+            <textarea id="cMessage" rows="5" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Envoyer le message
+          </button>
+          <div id="contactSuccess" class="form-success" style="display:none">
+            <i class="fas fa-check-circle"></i> Message envoyé ! Je vous répondrai très vite.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>SoulKing<span class="logo-bracket">/&gt;</span>
+          <p>Développeur Full Stack · Yaoundé, Cameroun</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">À propos</a>
+          <a href="#skills">Compétences</a>
+          <a href="#projects">Projets</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/keinest" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://wa.me/237673262834" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:linedevils271@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Keinest · Soulking — Tous droits réservés</p>
+        <p>Développé avec <i class="fas fa-heart" style="color:var(--accent)"></i> à Yaoundé</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <!-- ADMIN MODAL (secret: triple-click on footer logo) -->
+  <div id="adminModal" class="admin-modal" style="display:none">
+    <div class="admin-box">
+      <h3><i class="fas fa-lock"></i> Panneau Admin</h3>
+      <div id="adminLogin">
+        <input type="password" id="adminPass" placeholder="Mot de passe admin"/>
+        <button onclick="adminLogin()" class="btn btn-primary">Connexion</button>
+        <button onclick="closeAdmin()" class="btn btn-ghost">Annuler</button>
+      </div>
+      <div id="adminPanel" style="display:none">
+        <h4>Témoignages en attente</h4>
+        <div id="pendingList"></div>
+        <h4 style="margin-top:1.5rem">Témoignages publiés</h4>
+        <div id="approvedList"></div>
+        <button onclick="closeAdmin()" class="btn btn-ghost" style="margin-top:1rem">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+
+  <button id="backToTop" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
